@@ -1,0 +1,24 @@
+{
+  "name": "kodilla-grunt",
+  "version": "1.0.0",
+  "description": "grunt example",
+  "main": "index.js",
+  "scripts": {
+    "test": "kodilla-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "Szymon Grotha",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-sass": "^1.2.1"
+  }
+}

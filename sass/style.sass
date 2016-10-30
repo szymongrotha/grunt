@@ -1,0 +1,496 @@
+/*Global*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=latin-ext)
+
+
+$white: #FFFFFF
+$black: #000000
+$grey: #313234
+$facebook: #3B5998
+$twitter: #4099FF
+$instagram: #5C3D2E
+$google-plus: #DB5A3C
+$github: #4183C4
+$text-grey: #8A8A8A
+$background-blue: #03C7EF
+$single-blue: #00C7E8
+$another-grey: #252726
+$hover-blue: #03C5EB
+
+/* Grid */
+
+* 
+	box-sizing: border-box
+
+
+.row:before, 
+.row:after 
+	content: " "
+	display: table 
+	clear: both
+ 
+
+[class*="col-"] 
+	width: 100%
+	padding: 12px 
+	float: left
+
+
+.container 
+	width: 100%
+	max-width: 1200px
+	margin: 0 auto
+
+
+@media (max-width: 767px)
+	/* For tablets: */
+	.col-s-1
+		width: 8.33%
+	.col-s-2
+		width: 16.66%
+	.col-s-3
+		width: 25%
+	.col-s-3-5
+		width: 20%
+	.col-s-4
+		width: 33.33%
+	.col-s-5
+		width: 41.66%
+	.col-s-6
+		width: 50%
+	.col-s-7
+		width: 58.33%
+	.col-s-8
+		width: 66.66%
+	.col-s-9
+		width: 75%
+	.col-s-10
+		width: 83.33%
+	.col-s-11
+		width: 91.66%
+	.col-s-12
+		width: 100%
+
+
+@media (min-width: 768px) 
+	/* For demktop: */
+	.col-m-1
+		width: 8.33%
+	.col-m-2
+		width: 16.66%
+	.col-m-3
+		width: 25%
+	.col-m-3-5
+		width: 20%
+	.col-m-4
+		width: 33.33%
+	.col-m-5
+		width: 41.66%
+	.col-m-6
+		width: 50%
+	.col-m-7
+		width: 58.33%
+	.col-m-8
+		width: 66.66%
+	.col-m-9
+		width: 75%
+	.col-m-10
+		width: 83.33%
+	.col-m-11
+		width: 91.66%
+	.col-m-12
+		width: 100%
+
+		
+body 
+	margin: 0
+	font-family: "Open Sans"
+
+
+.nav:before,
+.nav:after 
+	content: " "
+	display: table 
+
+
+.nav:after 
+	clear: both
+
+
+/*Header*/
+
+
+header 
+	background: $grey
+	height: 50px 
+
+	nav 
+		img 
+			padding: 10px 30px
+
+
+.normal 
+	margin: 0
+	padding: 0
+	list-style-type: none 
+	float: right
+
+	li 
+		display: inline-block
+
+		a
+			line-height: 50px
+			padding: 0 20px
+			display: block
+			color: $white
+			text-decoration: none
+			text-transform: uppercase
+			&:hover
+				color: $hover-blue
+
+.hero 
+	background-image: url(http://i.imgur.com/FMXWFQK.jpg)
+	width: 100%
+	height: 75vh
+	background-size: cover
+	background-position: 50% 30%
+
+
+.slogan 
+	position: relative
+	top: 50%
+	float: right
+	color: $white
+	padding: 30px
+	max-height: 800px
+	background: rgba(0,0,0,0.5)
+
+	h1 
+		font-size: 40px
+		margin: 0
+		font-weight: bold
+
+	p 
+		font-size: 20px
+		margin: 0
+		text-align: center
+		font-weight: 500
+
+
+@media (max-width: 767px) 
+	header 
+		height: 200px
+		text-align: center
+	
+
+	.normal 
+		float: none
+
+		li 
+			display: block
+	
+
+	.slogan 
+		top: 40%
+
+		h1 
+			font-size: 30px
+
+		p 
+			font-size: 15px
+	
+
+
+/*Benefits*/
+
+.benefits .col-m-4 
+	margin-top: 60px
+	text-align: center
+
+	p 
+		color: $text-grey
+		font-size: 20px
+
+	h2 
+		text-transform: uppercase
+		font-size: 30px
+
+
+.benefits .col-m-4:nth-child(2) > h3, .fa-laptop 
+	color: $single-blue
+
+
+.icon
+	font-size: 80px
+
+/*Text Section*/
+
+
+.text 
+	margin-bottom: 50px
+	text-align: center
+
+	h2 
+		text-transform: uppercase
+		font-size: 60px
+
+
+	p 
+		color: $text-grey
+		font-size: 30px
+
+
+/*People section*/
+
+.team 
+	padding: 0 0 50px 0
+	
+	.col-m-3 
+		text-align: center
+		margin: 0
+
+		img 
+			border-radius: 50%
+			width: 90%
+			height: 90%
+			margin-top: 50px
+			&:hover
+				opacity: 0.3
+				cursor: pointer
+				transform: scale(1.10)
+
+
+/*Picture + Slogan*/
+
+
+.image 
+	width: 100%
+	background: $background-blue
+
+	.col-m-12
+		h2 
+			text-align: center
+			color: $white
+			text-transform: uppercase
+			font-size: 50px
+			text-shadow: $black 1px 1px
+			margin: 5px
+			padding: 0	
+
+
+.down  
+	margin: 0
+	position: relative
+
+	.col-m-5 
+		float: right
+		padding: 0
+
+		img 
+			width: 90%
+			height: 90%
+			float: right
+
+	.col-m-7 
+		text-shadow: $black 1px 1px	
+		color: $white
+
+		h2 
+			text-align: center
+			text-transform: uppercase
+			font-size: 50px
+
+		p 
+			font-size: 18px
+			font-weight: 500
+
+
+@media (max-width: 767px) 
+	.down .col-m-5 img 
+		width: 70%
+
+	
+/*Numbers*/
+
+
+.numbers .col-m-3
+	text-align: center
+
+	h3 
+		font-size: 80px
+		margin-top: 50px
+
+	.num 
+		font-size: 20px
+		text-transform: uppercase
+		color: $single-blue
+		margin-bottom: 50px
+
+
+@media (max-width: 767px) 
+	.numbers .col-m-3 
+		h3 
+			font-size: 60px
+	
+		.num
+			font-size: 15px
+
+
+/* Gallery */
+
+
+.pictures 
+	margin-bottom: 35px
+
+
+.gallery 
+	cursor: pointer
+	padding: 0
+	position: relative
+	text-align: center
+	color: $white
+	&:hover
+		.layer
+			display: block
+			cursor: pointer
+			background: rgba(0,0,0,0.5)
+
+	img 
+		width: 100%
+		height: 100%
+		float: left
+		padding: 0
+
+
+	.layer  
+		height: 100%
+		width: 100%
+		position: absolute
+		display: none
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		font-size: 20px
+
+		i 
+			padding-top: 45%
+			padding-bottom: 55%
+			margin: 5px
+
+
+@media (max-width: 767px) 
+	.gallery .layer 
+		display: block
+
+
+/* Footer */
+
+footer > .container > .row > .col-m-4 
+	padding: 0 10px
+
+
+footer 
+	background: $grey
+	color: $white
+
+	.container
+		padding: 0 10px
+
+	a 
+		text-decoration: none
+		color: $white
+
+	.col-m-4
+		float: left
+		text-shadow: $black 1px 1px
+		padding: 0
+
+		h2
+			margin: 25px 0 10px 0
+			text-transform: uppercase
+
+		h3 
+			margin-top: 10px
+			padding: 0
+
+	.col-m-8 
+		padding: 0
+
+		p 
+			margin-top: 10px
+			color: $white
+			text-shadow: $black 1px 1px
+
+	.col-m-12 
+		background: $another-grey
+		margin-top: 10px
+		padding: 0
+		text-align: center
+		text-shadow: $black 1px 1px
+
+
+@media (max-width: 767px) 
+	footer 
+		text-align: center
+
+		.container
+			padding: 0 10px
+
+		.col-m-4
+			float: none 
+			text-align: center
+
+/*Social*/
+
+
+.icon-btn 
+	float: left
+	margin: 5px
+	font-size: 25px
+	line-height: 50px
+	width: 50px
+	height: 50px
+	cursor: pointer
+	border: 0
+	background: $white
+	color: $white
+	border-radius: 100%
+	transition: ease-in-out .3s
+	&:hover
+		transform: scale(1.10)
+
+.twitter 
+	color: $twitter
+	&:hover
+		background: $twitter
+		color: $white
+
+.facebook 
+	color: $facebook
+	&:hover
+		background: $facebook
+		color: $white
+
+.instagram 
+	color: $instagram
+	&:hover
+		background: $instagram
+		color: $white
+
+.google-plus 
+	color: $google-plus
+	&:hover
+		background: $google-plus
+		color: $white
+
+.github	
+	color: $github
+	&:hover
+		background: $github
+		color: $white
+
+@media (max-width: 767px) 
+	.icon-btn 
+		float: none
+	
