@@ -1,20 +1,18 @@
 
 module.exports = function (grunt) {
-
-	// Project configuration.
-	grunt.initConfig({
-		sass: {
-			options: {
-				sourceMap: true
-			},
-			dist: {
-				files: {
-					'css/style.css': 'sass/style.sass'
-				}				
-			}
-		},
-
-		imagemin: {
+    grunt.initConfig({
+        watch: {
+            files: './sass/*.sass',
+            tasks: ['sass']
+        },
+        sass: {
+            dev: {
+                files: {
+                    './css/style.css': './sass/style.sass'
+                }
+            }
+        },
+        imagemin: {
 			dynamic: {
 				files: [{
 					expand: true,
@@ -24,29 +22,21 @@ module.exports = function (grunt) {
 				}]
 			}
 		},
-
-		watch: {
-			scripts: {
-				files: ['sass/*.sass'],
-				tasks: ['sass'],
-				options: {
-					spawn: false,
-				},
-			}
-		},
-
-		broswerSync: {
-			bsFiles: {
-				src: 'css/*.css'
-			},
-			options: {
-				server :{
-					baseDir: "./"
-				}
-			}
-		}
-
-	});
+        browserSync: {
+            dev: {
+                bsFiles: {
+                    src : [
+                        './css/*.css',
+                        './*.html'
+                    ]
+                },
+                options: {
+                    watchTask: true,
+                    server: './'
+                }
+            }
+        }
+    });
 
 	// Load the plugins tasks
 	grunt.loadNpmTasks('grunt-sass');
@@ -55,5 +45,5 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Default task(s).
-	grunt.registerTask('default', ['sass', 'imagemin', 'watch']);
+	grunt.registerTask('default', ['sass', 'imagemin', 'browserSync', 'watch']);
 };
